@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode;
+package org.firstinspires.ftc.teamcodeV3;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
@@ -9,7 +9,7 @@ public class SelfTest extends LinearOpMode{
 
 	@Override
 	public void runOpMode() throws InterruptedException {
-		Robot_ r = new Robot_(hardwareMap, DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+		RobotController.Robot_ r = new RobotController.Robot_(hardwareMap, DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 		waitForStart();
 		while(opModeIsActive()){
 			r.left_drive.setPower((gamepad1.dpad_up?1:0) - (gamepad1.dpad_down?1:0));
